@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beispiel01", "Beispiel01", "{A3A39158-6EB9-4697-848D-F9EF4F61415A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beispiel02", "Beispiel02", "{066EFA26-20B2-4B4C-AB07-077E6FB5A4C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beispiel03", "Beispiel03", "{AE83FB79-CF8B-4C2A-88DE-E3642285C5C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beispiel04", "Beispiel04", "{2F2607D7-6513-401D-8165-4477A34824B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beispiel05", "Beispiel05", "{2C97F0BD-141B-4060-89C1-0F7DA7175D2F}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
