@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-.
+
 [assembly: AssemblyTitle("CodeSharing.App02.Metro")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
