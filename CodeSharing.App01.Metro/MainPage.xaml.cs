@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+﻿using CodeSharing.Pcl01;
+using System;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +14,13 @@ namespace CodeSharing.App01.Metro
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void name_TextChanged(Object sender, TextChangedEventArgs e)
+        {
+            var sample = new Sample(name.Text);
+            greeting.Text = sample.Greetings();
+            welcome.Text = sample.Welcome();
         }
     }
 }

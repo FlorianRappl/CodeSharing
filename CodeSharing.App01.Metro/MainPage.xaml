@@ -8,6 +8,31 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Margin="50">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
 
+            <TextBox x:Name="name"
+                     Margin="20"
+                     TextChanged="name_TextChanged"
+                     FontSize="32"
+                     TextAlignment="Center"
+                     Grid.Row="0" />
+
+            <TextBlock x:Name="welcome"
+                       Margin="20"
+                       FontSize="32"
+                       TextAlignment="Center"
+                       Grid.Row="1" />
+
+            <TextBlock x:Name="greeting"
+                       Margin="20"
+                       FontSize="32"
+                       TextAlignment="Center"
+                       Grid.Row="2" />
+        </Grid>
     </Grid>
 </Page>
