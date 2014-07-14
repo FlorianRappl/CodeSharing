@@ -1,8 +1,46 @@
 ﻿<Window x:Class="CodeSharing.App03.Wpf.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Beispiel 03 - OOP und SOLID" Height="350" Width="525">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0"
+                 x:Name="KeyValueText"
+                 Height="30"
+                 Margin="20 20 140 20" />
+
+        <Button Grid.Row="0"
+                Height="30"
+                Width="100"
+                Margin="20"
+                HorizontalAlignment="Right"
+                Click="AddClick"
+                Content="Add" />
         
+        <ListBox Grid.Row="1"
+                 ItemsSource="{Binding ConfigurationContent}"
+                 Margin="20">
+        </ListBox>
+
+        <Button Grid.Row="2"
+                Margin="20"                
+                Width="100"
+                Height="30"
+                Click="LoadClick"
+                HorizontalAlignment="Left"
+                Content="Load" />
+
+        <Button Grid.Row="2"
+                Margin="20"                
+                Width="100"
+                Height="30"
+                Click="SaveClick"
+                HorizontalAlignment="Right"
+                Content="Save" />
     </Grid>
 </Window>
