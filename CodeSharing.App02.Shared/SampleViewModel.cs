@@ -1,0 +1,52 @@
+﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace CodeSharing.App02
+{
+    class SampleViewModel : INotifyPropertyChanged
+    {
+        String _name;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public String Name
+        {
+            get { return _name; }
+            set
+            {
+                _name = value;
+                RaisePropertyChanged();
+
+                //Refresh other properties
+                Hello = value;
+                Greetings = value;
+                Welcome = value;
+            }
+        }
+
+        public String Hello
+        {
+            get { return String.Format("Hello {0}!", _name); }
+            private set { RaisePropertyChanged(); }
+        }
+
+        public String Greetings
+        {
+            get { return String.Format("Greetings {0}.", _name); }
+            private set { RaisePropertyChanged(); }
+        }
+
+        public String Welcome
+        {
+            get { return String.Format("Welcome {0}!", _name); }
+            private set { RaisePropertyChanged(); }
+        }
+
+        void RaisePropertyChanged([CallerMemberName] String propertyName = null)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+}
