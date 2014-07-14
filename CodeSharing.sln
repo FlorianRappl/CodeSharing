@@ -13,8 +13,51 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beispiel04", "Beispiel04", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beispiel05", "Beispiel05", "{2C97F0BD-141B-4060-89C1-0F7DA7175D2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSharing.App01.Wpf", "CodeSharing.App01.Wpf\CodeSharing.App01.Wpf.csproj", "{0655C39F-211B-477F-8D6C-FA34781B3AF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSharing.App02.Wpf", "CodeSharing.App02.Wpf\CodeSharing.App02.Wpf.csproj", "{73AD578F-6A23-41A5-ACA2-E1DF1BAF21E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSharing.App03.Wpf", "CodeSharing.App03.Wpf\CodeSharing.App03.Wpf.csproj", "{45033956-2675-4B6A-B86E-19BB254CC90E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSharing.App04.Wpf", "CodeSharing.App04.Wpf\CodeSharing.App04.Wpf.csproj", "{638D2042-2FC9-47F3-AA69-1189F58FB8EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSharing.App05.Wpf", "CodeSharing.App05.Wpf\CodeSharing.App05.Wpf.csproj", "{728DB771-2861-4118-AB19-B88B63C3FEFD}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0655C39F-211B-477F-8D6C-FA34781B3AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0655C39F-211B-477F-8D6C-FA34781B3AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0655C39F-211B-477F-8D6C-FA34781B3AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0655C39F-211B-477F-8D6C-FA34781B3AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73AD578F-6A23-41A5-ACA2-E1DF1BAF21E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73AD578F-6A23-41A5-ACA2-E1DF1BAF21E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73AD578F-6A23-41A5-ACA2-E1DF1BAF21E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73AD578F-6A23-41A5-ACA2-E1DF1BAF21E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45033956-2675-4B6A-B86E-19BB254CC90E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45033956-2675-4B6A-B86E-19BB254CC90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45033956-2675-4B6A-B86E-19BB254CC90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45033956-2675-4B6A-B86E-19BB254CC90E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{638D2042-2FC9-47F3-AA69-1189F58FB8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638D2042-2FC9-47F3-AA69-1189F58FB8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638D2042-2FC9-47F3-AA69-1189F58FB8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638D2042-2FC9-47F3-AA69-1189F58FB8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{728DB771-2861-4118-AB19-B88B63C3FEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728DB771-2861-4118-AB19-B88B63C3FEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728DB771-2861-4118-AB19-B88B63C3FEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728DB771-2861-4118-AB19-B88B63C3FEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0655C39F-211B-477F-8D6C-FA34781B3AF7} = {A3A39158-6EB9-4697-848D-F9EF4F61415A}
+		{73AD578F-6A23-41A5-ACA2-E1DF1BAF21E8} = {066EFA26-20B2-4B4C-AB07-077E6FB5A4C1}
+		{45033956-2675-4B6A-B86E-19BB254CC90E} = {AE83FB79-CF8B-4C2A-88DE-E3642285C5C9}
+		{638D2042-2FC9-47F3-AA69-1189F58FB8EA} = {2F2607D7-6513-401D-8165-4477A34824B8}
+		{728DB771-2861-4118-AB19-B88B63C3FEFD} = {2C97F0BD-141B-4060-89C1-0F7DA7175D2F}
 	EndGlobalSection
 EndGlobal
