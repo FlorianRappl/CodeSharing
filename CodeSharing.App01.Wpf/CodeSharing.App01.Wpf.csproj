@@ -93,6 +93,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeSharing.Pcl01\CodeSharing.Pcl01.csproj">
+      <Project>{7aadf27c-6da8-44ef-8f4f-3b69ca7a6404}</Project>
+      <Name>CodeSharing.Pcl01</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
