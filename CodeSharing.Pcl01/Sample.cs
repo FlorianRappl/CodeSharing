@@ -2,6 +2,11 @@
 
 namespace CodeSharing.Pcl01
 {
+    /// <summary>
+    /// Shared class from a PCL with targets:
+    /// * Windows Store 8.1 and higher and
+    /// * .NET 4.5 Framework and higher.
+    /// </summary>
     public class Sample
     {
         readonly String _name;
