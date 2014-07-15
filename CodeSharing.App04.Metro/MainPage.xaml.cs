@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using CodeSharing.Pcl04;
+using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +12,22 @@ namespace CodeSharing.App04.Metro
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        ITracker tracker;
+
         public MainPage()
         {
             this.InitializeComponent();
+            DataContext = tracker = new MouseTracker();
+        }
+
+        private void StopTracking(Object sender, RoutedEventArgs e)
+        {
+            tracker.Stop();
+        }
+
+        private void StartTracking(Object sender, RoutedEventArgs e)
+        {
+            tracker.Start();
         }
     }
 }

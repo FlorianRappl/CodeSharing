@@ -9,5 +9,29 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="120" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{Binding Distance}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="DarkGray"
+                   FontSize="64" />
+
+        <Button Margin="20"
+                Content="Stop tracking"
+                Click="StopTracking"
+                Grid.Row="1"
+                Padding="10"
+                HorizontalAlignment="Left" />
+
+        <Button Margin="20"
+                Content="Start tracking"
+                Click="StartTracking"
+                Grid.Row="1"
+                Padding="10"
+                HorizontalAlignment="Right" />
     </Grid>
 </Page>
