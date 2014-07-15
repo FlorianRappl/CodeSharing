@@ -49,6 +49,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8FE720
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSharing.Pcl04", "CodeSharing.Pcl04\CodeSharing.Pcl04.csproj", "{6FB120F6-563D-403A-AA62-1C3B87087EBC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{5F268EE1-F752-4273-8290-25671994F88D}"
+	ProjectSection(SolutionItems) = preProject
+		CodeSharing.App05.Shared\Inspector.cs = CodeSharing.App05.Shared\Inspector.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -281,5 +286,6 @@ Global
 		{72D7A0FB-FA8E-4084-BBCA-486DBC041B88} = {AE83FB79-CF8B-4C2A-88DE-E3642285C5C9}
 		{8FE72081-996D-4514-B551-02FC2E16DF94} = {2F2607D7-6513-401D-8165-4477A34824B8}
 		{6FB120F6-563D-403A-AA62-1C3B87087EBC} = {2F2607D7-6513-401D-8165-4477A34824B8}
+		{5F268EE1-F752-4273-8290-25671994F88D} = {2C97F0BD-141B-4060-89C1-0F7DA7175D2F}
 	EndGlobalSection
 EndGlobal
