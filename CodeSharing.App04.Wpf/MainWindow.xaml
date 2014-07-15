@@ -3,6 +3,29 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
         
+        <TextBlock Text="{Binding Distance}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="DarkGray"
+                   FontSize="40" />
+
+        <Button Margin="20"
+                Content="Stop tracking"
+                Click="StopTracking"
+                Grid.Row="1"
+                Padding="10"
+                HorizontalAlignment="Left" />
+
+        <Button Margin="20"
+                Content="Start tracking"
+                Click="StartTracking"
+                Grid.Row="1"
+                Padding="10"
+                HorizontalAlignment="Right" />
     </Grid>
 </Window>

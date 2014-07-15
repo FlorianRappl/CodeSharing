@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CodeSharing.Pcl04;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CodeSharing.App04.Wpf
 {
@@ -20,9 +8,22 @@ namespace CodeSharing.App04.Wpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        ITracker tracker;
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = tracker = new MouseTracker();
+        }
+
+        private void StopTracking(object sender, RoutedEventArgs e)
+        {
+            tracker.Stop();
+        }
+
+        private void StartTracking(object sender, RoutedEventArgs e)
+        {
+            tracker.Start();
         }
     }
 }
