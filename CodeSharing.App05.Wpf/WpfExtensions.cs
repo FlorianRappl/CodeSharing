@@ -1,14 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace CodeSharing.App05
 {
     static class WpfExtensions
     {
-        public static IEnumerable<Type> GetAllTypes(this Assembly assembly)
+        public static Boolean IsInterfaceType(this Type type)
         {
-            return assembly.DefinedTypes;
+            return type.IsInterface;
+        }
+
+        public static Boolean IsAbstractType(this Type type)
+        {
+            return type.IsAbstract;
+        }
+
+        public static ConstructorInfo GetDefaultConstructor(this Type type)
+        {
+            return type.GetConstructor(Type.EmptyTypes);
+        }
+
+        public static Boolean ImplementsInterface(this Type type, Type interfaceType)
+        {
+            return type.GetInterfaces().Any(m => m == interfaceType);
         }
     }
 }

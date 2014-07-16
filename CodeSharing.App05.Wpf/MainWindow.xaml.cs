@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Reflection;
+using System.Windows;
 
 namespace CodeSharing.App05.Wpf
 {
@@ -10,6 +11,8 @@ namespace CodeSharing.App05.Wpf
         public MainWindow()
         {
             InitializeComponent();
+            var inspector = new Inspector(Assembly.GetExecutingAssembly());
+            DataContext = inspector.GetInstance<IMessageHolder>();
         }
     }
 }

@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 
 namespace CodeSharing.App05
@@ -14,9 +12,57 @@ namespace CodeSharing.App05
             _assembly = assembly;
         }
 
-        public IEnumerable<String> FindAllPublicClasses()
+        public T GetInstance<T>()
+            where T : class
         {
-            return _assembly.ExportedTypes.Select(m => m.Name);
+            if (typeof(T).IsInterfaceType())
+                return GetInstanceFromInterface(typeof(T)) as T;
+            else if (typeof(T).IsAbstractType())
+                return GetInstanceFromBaseClass(typeof(T)) as T;
+
+            return CreateInstance(typeof(T)) as T;
+        }
+
+        Object CreateInstance(Type type)
+        {
+            var constructor = type.GetDefaultConstructor();
+
+            if (constructor != null)
+                return constructor.Invoke(null);
+
+            return null;
+        }
+
+        Object GetInstanceFromBaseClass(Type baseType)
+        {
+            foreach (var definedType in _assembly.ExportedTypes)
+            {
+                if (definedType.IsSubclassOf(baseType) && !definedType.IsAbstractType())
+                {
+                    var obj = CreateInstance(definedType);
+
+                    if (obj != null)
+                        return obj;
+                }
+            }
+
+            return null;
+        }
+
+        Object GetInstanceFromInterface(Type requiredInterface)
+        {
+            foreach (var definedType in _assembly.ExportedTypes)
+            {
+                if (definedType.ImplementsInterface(requiredInterface) && !definedType.IsAbstractType() && !definedType.IsInterfaceType())
+                {
+                    var obj = CreateInstance(definedType);
+
+                    if (obj != null)
+                        return obj;
+                }
+            }
+
+            return null;
         }
     }
 }
