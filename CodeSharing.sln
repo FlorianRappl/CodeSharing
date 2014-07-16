@@ -51,6 +51,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSharing.Pcl04", "CodeSh
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{5F268EE1-F752-4273-8290-25671994F88D}"
 	ProjectSection(SolutionItems) = preProject
+		CodeSharing.App05.Shared\IMessageHolder.cs = CodeSharing.App05.Shared\IMessageHolder.cs
 		CodeSharing.App05.Shared\Inspector.cs = CodeSharing.App05.Shared\Inspector.cs
 	EndProjectSection
 EndProject
