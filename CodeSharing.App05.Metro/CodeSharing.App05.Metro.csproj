@@ -105,6 +105,9 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CodeSharing.App05.Shared\IMessageHolder.cs">
+      <Link>IMessageHolder.cs</Link>
+    </Compile>
     <Compile Include="..\CodeSharing.App05.Shared\Inspector.cs">
       <Link>Inspector.cs</Link>
     </Compile>
@@ -115,6 +118,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MetroExtensions.cs" />
+    <Compile Include="MetroMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

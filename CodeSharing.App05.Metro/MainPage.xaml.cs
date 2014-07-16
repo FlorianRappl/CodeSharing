@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml.Controls;
+﻿using System.Reflection;
+using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -12,6 +13,8 @@ namespace CodeSharing.App05.Metro
         public MainPage()
         {
             this.InitializeComponent();
+            var inspector = new Inspector(GetType().GetTypeInfo().Assembly);
+            DataContext = inspector.GetInstance<IMessageHolder>();
         }
     }
 }

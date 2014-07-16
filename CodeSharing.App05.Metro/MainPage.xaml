@@ -8,6 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <TextBlock Text="{Binding Message}"
+                   FontSize="80"
+                   Foreground="SteelBlue"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
     </Grid>
 </Page>
