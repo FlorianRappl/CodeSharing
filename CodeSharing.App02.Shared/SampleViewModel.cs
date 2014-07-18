@@ -37,7 +37,7 @@ namespace CodeSharing.App02
 
         public String Hello
         {
-            get { return String.Format("Hello {0}!", _name); }
+            get { return String.Format("Hello my friend {0}!", _name); }
             private set { RaisePropertyChanged(); }
         }
 
